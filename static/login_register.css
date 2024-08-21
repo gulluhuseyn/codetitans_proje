@@ -1,0 +1,224 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  font-family: Roboto;
+}
+:root {
+  --main_color: #35aff4;
+  --white: #fff;
+}
+.login,
+.register,
+.forgot,
+.enter {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+.login_pict,
+.register_pict,
+.forgot_pict,
+.enter_pict {
+  width: 50%;
+  height: 100vh;
+}
+.login_pict img,
+.register_pict img,
+.forgot_pict img,
+.enter_pict img {
+  width: 100%;
+  height: 100%;
+}
+.login_base,
+.register_base,
+.forgot_base,
+.enter_base {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+.login_word h1,
+.register_word h2,
+.forgot_word h2,
+.enter_word h2{
+  font-size: 30px;
+  font-weight: 700;
+  line-height: 35.16px;
+  text-align: left;
+}
+.login_word p,
+.register_word p,
+.forgot_word p,
+.enter_word p,
+.success_word p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+  color: #a6aaac;
+}
+.login_form_group input,
+.register_form_group input,
+.forgot_form_group input {
+  width: 416px;
+  padding: 16px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 10px;
+  border-radius: 10px;
+  border: 1px solid var(--main_color);
+  outline: none;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+.login_form_group label,
+.register_form_group label,
+.forgot_form_group label {
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: left;
+}
+.login_form_sub {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.login_form_check,
+.register_form_check {
+  display: flex;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+.login_form_sub a{
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 22px;
+  text-align: right;
+  color: #0F1416;
+}
+.forgot_back,
+.enter_back {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+.forgot_back i,
+.enter_back i {
+  cursor: pointer;
+}
+.forgot_back p,
+.enter_back p {
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: left;
+}
+.enter_input input {
+  width: 60px;
+  height: 60px;
+  padding: 15px;
+  border: 1px solid var(--main_color);
+  margin: 10px;
+  padding: 25px;
+  border-radius: 10px;
+  outline: none;
+}
+.success {
+  width: 432px;
+  height: 332px;
+  background-color: yellow;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 30px;
+  text-align: center;
+}
+.ellipse1 {
+  background-color: #35aff41a;
+  border-radius: 50%;
+  height: 108px;
+  width: 108px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ellipse2 {
+  background-color: #35aff433;
+  border-radius: 50%;
+  height: 86px;
+  width: 86px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ellipse3 {
+  background-color: var(--main_color);
+  border-radius: 50%;
+  height: 64px;
+  width: 64px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.btn {
+  width: 100%;
+  padding: 20px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--main_color);
+  cursor: pointer;
+  color: var(--white);
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 26px;
+  text-align: center;
+}
+.btn_back_login {
+  width: 300px;
+  height: 56px;
+  border: none;
+  border-radius: 10px;
+  background-color: var(--main_color);
+  cursor: pointer;
+  color: var(--white);
+}
+.alert_warning{
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #721c24;
+  background-color: #f8d7da;
+  border-color: #f5c6cb;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}
+.alert_success{
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  font-weight: 700;
+  color: #155724;
+  background-color: #d4edda;
+  border-color: #c3e6cb;
+  padding: .75rem 1.25rem;
+  margin-bottom: 1rem;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+}

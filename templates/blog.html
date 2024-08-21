@@ -1,0 +1,188 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block page_title %} 
+Blog page 
+{% endblock page_title %} 
+
+
+{% block body %}
+<div class="breadcrumb">
+  <div class="container">
+    <p>Home <i class="fa-solid fa-angle-right"></i> Blog</p>
+  </div>
+</div>
+<div class="blog_pict">
+  <img src="{% static 'blog/blog.png' %}" alt="" />
+</div>
+<div class="container">
+  <div class="blog_word">
+    <h1>Blog</h1>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="blog_cards">
+      <div class="blog_card">
+        <div class="blog_card_pict">
+          <img src="{% static "blog/card1.png" %}" alt="" />
+        </div>
+        <div class="card_main_info">
+          <div class="card_info">
+            <div class="card_content">
+              <i class="fa-regular fa-thumbs-up"></i>
+              <span>15 Likes</span>
+            </div>
+            <div class="card_content">
+              <i class="fa-regular fa-comments"></i>
+              <span>2 Comments</span>
+            </div>
+          </div>
+          <div class="card_main">
+            <h1>Favourite Things To Do In Cape Town</h1>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
+            </p>
+          </div>
+        </div>
+        <button class="card_btn">Read More</button>
+      </div>
+      <div class="blog_card">
+        <div class="blog_card_pict">
+          <img src="{% static "blog/card2.png" %}" alt="" />
+        </div>
+        <div class="card_main_info">
+          <div class="card_info">
+            <div class="card_content">
+              <i class="fa-regular fa-thumbs-up"></i>
+              <span>15 Likes</span>
+            </div>
+            <div class="card_content">
+              <i class="fa-regular fa-comments"></i>
+              <span>2 Comments</span>
+            </div>
+          </div>
+          <div class="card_main">
+            <h1>Pack wisely before traveling</h1>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
+            </p>
+          </div>
+        </div>
+        <button class="card_btn">Read More</button>
+      </div>
+      <div class="blog_card">
+        <div class="blog_card_pict">
+          <img src="{% static "blog/card3.png" %}" alt="" />
+        </div>
+        <div class="card_main_info">
+          <div class="card_info">
+            <div class="card_content">
+              <i class="fa-regular fa-thumbs-up"></i>
+              <span>15 Likes</span>
+            </div>
+            <div class="card_content">
+              <i class="fa-regular fa-comments"></i>
+              <span>2 Comments</span>
+            </div>
+          </div>
+          <div class="card_main">
+            <h1>How to travel with paper map</h1>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
+            </p>
+          </div>
+        </div>
+        <button class="card_btn">Read More</button>
+      </div>
+      <div class="blog_card">
+        <div class="blog_card_pict">
+          <img src="{% static "blog/card4.png" %}" alt="" />
+        </div>
+        <div class="card_main_info">
+          <div class="card_info">
+            <div class="card_content">
+              <i class="fa-regular fa-thumbs-up"></i>
+              <span>15 Likes</span>
+            </div>
+            <div class="card_content">
+              <i class="fa-regular fa-comments"></i>
+              <span>2 Comments</span>
+            </div>
+          </div>
+          <div class="card_main">
+            <h1>Introducing this amazing city</h1>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
+            </p>
+          </div>
+        </div>
+        <button class="card_btn">Read More</button>
+      </div>
+      <div class="blog_card">
+        <div class="blog_card_pict">
+          <img src="{% static "blog/card5.png" %}" alt="" />
+        </div>
+        <div class="card_main_info">
+          <div class="card_info">
+            <div class="card_content">
+              <i class="fa-regular fa-thumbs-up"></i>
+              <span>15 Likes</span>
+            </div>
+            <div class="card_content">
+              <i class="fa-regular fa-comments"></i>
+              <span>2 Comments</span>
+            </div>
+          </div>
+          <div class="card_main">
+            <h1>Change your place and get the fresh air</h1>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
+            </p>
+          </div>
+        </div>
+        <button class="card_btn">Read More</button>
+      </div>
+      <div class="blog_card">
+        <div class="blog_card_pict">
+          <img src="{% static "blog/card6.png" %}" alt="" />
+        </div>
+        <div class="card_main_info">
+          <div class="card_info">
+            <div class="card_content">
+              <i class="fa-regular fa-thumbs-up"></i>
+              <span>15 Likes</span>
+            </div>
+            <div class="card_content">
+              <i class="fa-regular fa-comments"></i>
+              <span>2 Comments</span>
+            </div>
+          </div>
+          <div class="card_main">
+            <h1>Even the all-powerful Pointing</h1>
+            <p>
+              It is a long established fact that a reader will be distracted by
+              the readable content of a page when looking at its layout.
+            </p>
+          </div>
+        </div>
+        <button class="card_btn">Read More</button>
+      </div>
+    </div>
+    <div class="page_pass">
+      <i class="fa-solid fa-arrow-left"></i>
+      <a href="">1</a>
+      <a href="">2</a>
+      <a href="">3</a>
+      <a href="">4</a>
+      <a href="">5</a>
+      <i class="fa-solid fa-arrow-right"></i>
+    </div>
+  </div>
+</section>
+{% endblock body %}

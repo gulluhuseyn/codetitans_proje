@@ -1,0 +1,56 @@
+{% extends 'main_account.html' %} 
+{% load static %}
+
+{% block page_title %} 
+    Register page 
+{% endblock page_title %}
+
+{% block body %}
+<div class="register">
+  <div class="register_pict">
+    <img src="{% static "login_register/register.png" %}" alt="" />
+  </div>
+  <div class="register_base">
+    <div class="register_word">
+      <h2>Create New Account</h2>
+      <p>Please enter details</p>
+    </div>
+    <div class="register_form">
+      <form method="post">
+        {% csrf_token %}
+
+        <div class="register_form_group">
+          <label for="{{form.username.id_for_label}}">First name</label>
+          {{form.username}}
+          {% comment %} <input type="text" placeholder="Perry" /> {% endcomment %}
+        </div>
+        <br />
+        <div class="register_form_group">
+          <label for="{{form.surname.id_for_label}}">Last name</label>
+          {{form.surname}}
+          {% comment %} <input type="text" placeholder="Wilson" /> {% endcomment %}
+        </div>
+        <br />
+        <div class="register_form_group">
+          <label for="{{form.email.id_for_label}}">Email Address</label>
+          {{form.email}}
+          {% comment %} <input type="email" placeholder="perry.wilson@example.com" /> {% endcomment %}
+        </div>
+        <br />
+        <div class="register_form_group">
+          <label for="{{form.password.id_for_label}}">Password</label>
+          {{form.password}}
+          {% comment %} <input type="password" placeholder="•••••••••••••••" /> {% endcomment %}
+        </div>
+        <br />
+        <div class="register_form_check">
+          <input type="checkbox" />
+          <label for="agreement">I agree to the Terms & Conditions</label>
+        </div>
+        <br /><br />
+        <button type="submit" class="btn">Signup</button>
+      </form>
+    </div>
+  </div>
+</div>
+{% endblock body %}
