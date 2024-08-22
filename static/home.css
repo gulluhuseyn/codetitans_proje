@@ -26,6 +26,10 @@
   align-items: center;
   margin: 25px 0;
 }
+.nav_logo img {
+  width: 65px;
+  height: 65px;
+}
 .nav_links ul {
   display: flex;
   gap: 30px;
@@ -51,101 +55,9 @@
   line-height: 22px;
   text-align: left;
 }
-.blog_pict {
-  width: 100%;
-  height: 70vh;
-}
-.blog_pict img {
-  width: 100%;
-  height: 100%;
-}
-.blog_word {
-  margin: -120px 0 120px;
-}
-.blog_cards {
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-.blog_card {
-  width: calc((100% - (20px * (2 - 1))) / 2);
-  padding-bottom: 10px;
-}
-.blog_card_pict {
-  padding-bottom: 20px;
-}
-.blog_card_pict img {
-  width: 100%;
-}
-.blog_word h1 {
-  color: var(--white);
-  font-size: 60px;
-  font-weight: 700;
-  line-height: 80px;
-  text-align: left;
-}
-.card_main_info {
-  padding-bottom: 20px;
-}
-.card_info {
-  display: flex;
-  gap: 20px;
-}
-.card_main h1 {
-  font-size: 20px;
-  font-weight: 700;
-  line-height: 30px;
-  text-align: left;
-}
-.card_main p {
-  color: #a6aaac;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-}
-.card_content {
-  display: flex;
-  gap: 5px;
-  align-items: center;
-}
-.card_content i {
-  color: var(--main_color);
-}
-.card_content span {
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-}
-.page_pass {
-  display: flex;
-  align-items: center;
-  justify-content: right;
-  gap: 10px;
-  margin-top: 50px;
-}
-.page_pass a {
-  border: 1px solid #a6aaac1a;
-  background-color: #a6aaac1a;
-  padding: 7px 15px;
-  border-radius: 5px;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-}
-.page_pass a:first-of-type {
-  background-color: var(--main_color);
-  border: 1px solid var(--main_color);
-}
-.page_pass .fa-arrow-left {
-  color: #a6aaac;
-}
 .footer {
+  margin-top: 120px;
   border-top: 1px solid #a6aaac33;
-  margin-top: 100px;
 }
 .footer_col {
   display: flex;
@@ -176,6 +88,10 @@
   display: flex;
   justify-content: space-between;
   width: calc(70% - 50px * 0.7);
+}
+.footer_logo img {
+  width: 58px;
+  height: 58px;
 }
 .footer_links h1 {
   padding-bottom: 20px;
@@ -237,15 +153,124 @@
   line-height: 26px;
   text-align: left;
 }
-.card_btn {
-  color: var(--white);
-  background-color: var(--main_color);
-  border: 1px solid var(--main_color);
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 26px;
-  text-align: left;
-  padding: 15px 20px;
-  border-radius: 10px;
-  cursor: pointer;
+#menu_btn,
+#login_icon,
+#signup_icon{
+  display: none;
+}
+@media only screen and (max-width: 1024px) {
+  .nav_logo img {
+    width: 50px;
+    height: 50px;
+  }
+  .nav_links ul li a {
+    font-size: 14px;
+  }
+  .breadcrumb p {
+    font-size: 12px;
+  }
+  .footer_logo img {
+    width: 48px;
+    height: 48px;
+  }
+  .footer_contact_col p,
+  .footer_social_col p,
+  .footer_links ul li a {
+    font-size: 14px;
+  }
+  .footer_links h1 {
+    font-size: 16px;
+  }
+  #signup {
+    font-size: 14px;
+    padding: 13px;
+  }
+  #login{
+    font-size: 14px;
+    padding: 13px 16px;
+  }
+}
+@media only screen and (max-width: 840px) {
+  .navbar {
+    margin: 18px 0;
+    position: relative;
+  }
+  #menu_btn,
+  #login_icon,
+  #signup_icon {
+    display: block;
+    font-size: 18px;
+    border: none;
+    background-color: var(--white);
+    color: var(--main_color);
+  }
+  .nav_links ul {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: -100%;
+    padding: 25px;
+    background-color: var(--white);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: right 0.3s ease;
+  }
+  .nav_links ul li {
+    padding-bottom: 10px;
+  }
+  .nav_links ul li a {
+    color: var(--text_color);
+  }
+  .nav_links ul.active {
+    display: block;
+    right: 0;
+  }
+  .breadcrumb {
+    padding: 14px;
+  }
+  .footer {
+    margin-top: 90px;
+  }
+  .footer_logo {
+    margin: 25px 0;
+  }
+  .footer_contact {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer_contact_cols {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .footer_add {
+    width: 100%;
+  }
+  .footer_col {
+    display: block;
+  }
+  .footer_contact_col p,
+  .footer_social_col p,
+  .footer_links ul li a {
+    font-size: 12px;
+  }
+  .footer_links h1 {
+    font-size: 16px;
+  }
+  #signup,
+  #login {
+    display: none;
+  }
+}
+@media only screen and (max-width: 550px) {
+  .footer_contact_cols{
+    gap: 15px;
+  }
+   .footer_contact_col{
+    margin: 0;
+   }
+  .footer_logo{
+    display: none;
+  }
 }

@@ -10,6 +10,7 @@
 :root {
   --main_color: #35aff4;
   --white: #fff;
+  --text_color: #0F1416;
 }
 .login,
 .register,
@@ -23,8 +24,8 @@
 .register_pict,
 .forgot_pict,
 .enter_pict {
-  width: 50%;
-  height: 100vh;
+  width: calc(60% - 50px * 0.6);
+  height: 120vh;
 }
 .login_pict img,
 .register_pict img,
@@ -37,14 +38,20 @@
 .register_base,
 .forgot_base,
 .enter_base {
+  width: calc(40% - 50px * 0.4);
+  padding-right: 100px;
   display: flex;
   flex-direction: column;
   gap: 30px;
 }
+.logo img{
+  width: 80px;
+  height: 80px;
+}
 .login_word h1,
 .register_word h2,
 .forgot_word h2,
-.enter_word h2{
+.enter_word h2 {
   font-size: 30px;
   font-weight: 700;
   line-height: 35.16px;
@@ -53,8 +60,7 @@
 .login_word p,
 .register_word p,
 .forgot_word p,
-.enter_word p,
-.success_word p {
+.enter_word p{
   font-size: 16px;
   font-weight: 400;
   line-height: 26px;
@@ -64,12 +70,11 @@
 .login_form_group input,
 .register_form_group input,
 .forgot_form_group input {
-  width: 416px;
+  width: 100%;
   padding: 16px;
   display: flex;
   justify-content: center;
   align-items: center;
-  padding: 10px;
   border-radius: 10px;
   border: 1px solid var(--main_color);
   outline: none;
@@ -100,13 +105,12 @@
   line-height: 26px;
   text-align: left;
 }
-.login_form_sub a{
-  cursor: pointer;
+.login_form_sub a {
   font-size: 14px;
   font-weight: 400;
   line-height: 22px;
   text-align: right;
-  color: #0F1416;
+  color: var(--text_color);
 }
 .forgot_back,
 .enter_back {
@@ -126,53 +130,13 @@
   text-align: left;
 }
 .enter_input input {
-  width: 60px;
-  height: 60px;
-  padding: 15px;
+  width: 40px;
+  height: 40px;
+  padding: 10px;
   border: 1px solid var(--main_color);
   margin: 10px;
-  padding: 25px;
   border-radius: 10px;
   outline: none;
-}
-.success {
-  width: 432px;
-  height: 332px;
-  background-color: yellow;
-  border-radius: 10px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 30px;
-  text-align: center;
-}
-.ellipse1 {
-  background-color: #35aff41a;
-  border-radius: 50%;
-  height: 108px;
-  width: 108px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.ellipse2 {
-  background-color: #35aff433;
-  border-radius: 50%;
-  height: 86px;
-  width: 86px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-.ellipse3 {
-  background-color: var(--main_color);
-  border-radius: 50%;
-  height: 64px;
-  width: 64px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 .btn {
   width: 100%;
@@ -187,14 +151,101 @@
   line-height: 26px;
   text-align: center;
 }
-.btn_back_login {
-  width: 300px;
-  height: 56px;
-  border: none;
-  border-radius: 10px;
-  background-color: var(--main_color);
-  cursor: pointer;
-  color: var(--white);
+@media only screen and (max-width: 980px) {
+  .login_pict,
+  .register_pict,
+  .forgot_pict,
+  .enter_pict {
+    width: calc(50% - 50px * 0.5);
+    height: 140vh;
+  }
+  .login_base,
+  .register_base,
+  .forgot_base,
+  .enter_base {
+    width: calc(50% - 50px * 0.5);
+  }
+  .logo img{
+    width: 60px;
+    height: 60px;
+  }
+  .login_word h1,
+  .register_word h2,
+  .forgot_word h2,
+  .enter_word h2 {
+    font-size: 24px;
+  }
+  .login_word p,
+  .register_word p,
+  .forgot_word p,
+  .enter_word p{
+    font-size: 14px;
+  }
+  .login_form_group input,
+  .register_form_group input,
+  .forgot_form_group input {
+    padding: 14px;
+    font-size: 14px;
+  }
+  .login_form_group label,
+  .register_form_group label,
+  .forgot_form_group label {
+    font-size: 10px;
+  }
+  .login_form_check,
+  .register_form_check {
+    font-size: 12px;
+  }
+  .login_form_sub a{
+    font-size: 12px;
+  }
+  .forgot_back p,
+  .enter_back p {
+    font-size: 14px;
+  }
+}
+@media only screen and (max-width: 780px) {
+  .login_base,
+  .register_base,
+  .forgot_base,
+  .enter_base {
+    width: 100%;
+    padding: 0;
+    margin: 60px;
+  }
+  .login_pict,
+  .register_pict,
+  .forgot_pict,
+  .enter_pict {
+    display: none;
+  }
+  .login_word h1,
+  .register_word h2,
+  .forgot_word h2,
+  .enter_word h2 {
+    font-size: 20px;
+  }
+  .login_word p,
+  .register_word p,
+  .forgot_word p,
+  .enter_word p {
+    font-size: 14px;
+  }
+  .login_form_group input,
+  .register_form_group input,
+  .forgot_form_group input {
+    padding: 12px;
+    font-size: 12px;
+  }
+  .login_form_group label,
+  .register_form_group label,
+  .forgot_form_group label {
+    font-size: 12px;
+  }
+  .btn{
+    padding: 10px;
+    font-size: 12px;
+  }
 }
 .alert_warning{
   width: 100%;

@@ -1,20 +1,8 @@
 from django.shortcuts import render
 
 # Create your views here.
-def home_view(request):
-    return render(request,"home.html")
+def destination_overview_view(request):
+    return render(request,"destination_overview.html")
 
-def about_us_view(request):
-    return render(request,"about_us.html")
-
-def services_view(request):
-    return render(request,"services.html")
-
-def destinations_view(request):
-    return render(request,"destinations.html")
-
-def blog_view(request):
-    return render(request,"blog.html")
-
-def contact_us_view(request):
-    return render(request,"contact_us.html")
+def destination_review_view(request):
+    return render(request,"destination_review.html")

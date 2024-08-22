@@ -7,6 +7,8 @@ Blog page
 
 
 {% block body %}
+<link rel="stylesheet" href="{% static "blog.css" %}"/>
+
 <div class="breadcrumb">
   <div class="container">
     <p>Home <i class="fa-solid fa-angle-right"></i> Blog</p>
@@ -46,7 +48,7 @@ Blog page
             </p>
           </div>
         </div>
-        <button class="card_btn">Read More</button>
+        <a href="{% url "blog_detail" %}"><button class="card_btn">Read More</button></a>
       </div>
       <div class="blog_card">
         <div class="blog_card_pict">

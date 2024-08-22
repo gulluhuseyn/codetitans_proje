@@ -1,0 +1,197 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block page_title %} 
+Blog detail page 
+{% endblock page_title %} 
+
+{% block body %} 
+<link rel="stylesheet" href="{% static "blog.css" %}"/>
+
+<div class="breadcrumb">
+  <div class="container">
+    <p>
+      Home <i class="fa-solid fa-angle-right"></i> Blog
+      <i class="fa-solid fa-angle-right"></i> Favourite Things To Do In Cape
+      Town
+    </p>
+  </div>
+</div>
+<div class="blog_pict">
+  <img src="{% static 'blog/blog.png' %}" alt="" />
+</div>
+<div class="container">
+  <div class="blog_word">
+    <h1>Blog</h1>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="main_blog">
+      <div class="main_blog_detail">
+        <div class="main_blog_pict">
+          <img src="{% static "blog/card1.png" %}" alt="" />
+        </div>
+        <div class="card_info_detail">
+          <div class="card_content">
+            <i class="fa-regular fa-thumbs-up"></i>
+            <span>15 Likes</span>
+          </div>
+          <div class="card_content">
+            <i class="fa-regular fa-comments"></i>
+            <span>2 Comments</span>
+          </div>
+        </div>
+        <div class="main_blog_content">
+          <h1>Favourite Things To Do In Cape Town</h1>
+          <p>
+            Lorem Ipsum is simply dummy text of the printing and typesetting
+            industry. Lorem Ipsum has been the industry's standard dummy text
+            ever since the 1500s, when an unknown printer took a galley of type
+            and scrambled it to make a type specimen book. It has survived not
+            only five centuries, but also the leap into electronic typesetting,
+            remaining essentially unchanged.<br />
+            It was popularised in the 1960s with the release of Letraset sheets
+            containing Lorem Ipsum passages, and more recently with desktop
+            publishing software like Aldus PageMaker including versions of Lorem
+            Ipsum.<br />
+            It is a long established fact that a reader will be distracted by
+            the readable content of a page when looking at its layout. The point
+            of using Lorem Ipsum is that it has a more-or-less normal
+            distribution of letters, as opposed to using 'Content here, content
+            here', making it look like readable English. Many desktop publishing
+            packages and web page editors now use Lorem Ipsum as their default
+            model text, and a search for 'lorem ipsum' will uncover many web
+            sites still in their infancy. Various versions have evolved over the
+            years, sometimes by accident, sometimes on purpose (injected humour
+            and the like).
+          </p>
+        </div>
+        <div class="blog_support">
+          <div class="blog_support_col">
+            <i class="fa-solid fa-check"></i>
+            <p>It is a long established fact that a reader</p>
+          </div>
+          <div class="blog_support_col">
+            <i class="fa-solid fa-check"></i>
+            <p>Many desktop publishing packages and web page editors now use</p>
+          </div>
+          <div class="blog_support_col">
+            <i class="fa-solid fa-check"></i>
+            <p>Various versions have evolved over the ye</p>
+          </div>
+          <div class="blog_support_col">
+            <i class="fa-solid fa-check"></i>
+            <p>When an unknown printer took a galley of type and scrambled</p>
+          </div>
+        </div>
+        <div class="blog_comment">
+          <h1>2 Comments</h1>
+          <br />
+          <div class="blog_comment_col">
+            <div class="comment_profile">
+              <div class="comment_profile_pict">
+                <img src="{% static "blog/comment1.svg" %}" alt="" />
+              </div>
+              <div class="comment_profile_cont">
+                <h2>Mark Williams</h2>
+                <p>14 August, 2023</p>
+              </div>
+            </div>
+            <div class="comment_content">
+              <p>
+                It was popularised in the 1960s with the release of Letraset
+                sheets containing Lorem Ipsum passages, and more recently with
+                desktop publishing software like Aldus PageMaker including
+                versions of Lorem Ipsum.
+              </p>
+            </div>
+          </div>
+          <div class="blog_comment_col">
+            <div class="comment_profile">
+              <div class="comment_profile_pict">
+                <img src="{% static "blog/comment2.svg" %}" alt="" />
+              </div>
+              <div class="comment_profile_cont">
+                <h2>Alexa Johnson</h2>
+                <p>14 August, 2023</p>
+              </div>
+            </div>
+            <div class="comment_content">
+              <p>
+                It is a long established fact that a reader will be distracted
+                by the readable content of a page when looking at its layout.
+                The point of using Lorem Ipsum is that it has a more-or-less
+                normal distribution of letters, as opposed to using 'Content
+                here, content here', making it look like readable English.
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="add_comment">
+          <h1>Leave a Reply</h1>
+          <form>
+            <div class="form_comment">
+              <label for="name">
+                Name
+                <input type="text" placeholder="Enter Your Name" />
+              </label>
+            </div>
+            <div class="form_comment">
+              <label for="email">
+                Email Address
+                <input type="email" placeholder="Enter Your Email" />
+              </label>
+            </div>
+            <div class="form_comment">
+              <label for="comment">
+                Comments
+                <textarea placeholder="Enter Your Comments"></textarea>
+              </label>
+            </div>
+          </form>
+          <button class="add_comment_btn">Submit</button>
+        </div>
+      </div>
+      <div class="others_blog">
+        <form>
+          <div class="search">
+            <input type="text" placeholder="Search" />
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </form>
+        <div class="recent_post">
+          <h1>Recent Post</h1>
+          <div class="recent_post_col">
+            <div class="recent_post_pict">
+              <img src="{% static "blog/card2.png" %}" alt="" />
+            </div>
+            <div class="recent_post_name">
+              <h2>Pack wisely before traveling</h2>
+              <span>07 July, 2023</span>
+            </div>
+          </div>
+          <div class="recent_post_col">
+            <div class="recent_post_pict">
+              <img src="{% static "blog/card4.png" %}" alt="" />
+            </div>
+            <div class="recent_post_name">
+              <h2>Introducing this amazing city</h2>
+              <span>07 July, 2023</span>
+            </div>
+          </div>
+          <div class="recent_post_col">
+            <div class="recent_post_pict">
+              <img src="{% static "blog/card6.png" %}" alt="" />
+            </div>
+            <div class="recent_post_name">
+              <h2>Even the all-powerful Pointing</h2>
+              <span>07 July, 2023</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}

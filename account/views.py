@@ -53,3 +53,6 @@ def forgot_password_view(request):
 
 def enter_otp_view(request):
     return render(request,"enter_otp.html")
+
+def login_success_view(request):
+    return render(request,"login_success.html")

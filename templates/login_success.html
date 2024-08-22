@@ -1,0 +1,112 @@
+{% extends 'main_account.html' %} 
+{% load static %}
+
+{% block page_title %}
+  Login success page
+{% endblock page_title %}
+
+{% block body %}
+<link rel="stylesheet" href="{% static "login_success.css" %}"/>
+
+<div class="enter">
+    <div class="enter_pict">
+      <img src="{% static "login_register/enter_otp.png" %}" alt="" />
+    </div>
+    <div class="enter_base">
+      <div class="enter_back">
+        <i class="fa-solid fa-angle-left"></i>
+        <p>Back</p>
+      </div>
+      <div class="enter_word">
+        <h2>Enter OTP</h2>
+        <p>We have share a code of your registered email address...</p>
+      </div>
+      <div class="enter_form">
+        <form>
+          <div class="enter_input">
+            <input
+              class="input"
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+            />
+            <input
+              class="input"
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+            />
+            <input
+              class="input"
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+            />
+            <input
+              class="input"
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+            />
+            <input
+              class="input"
+              type="text"
+              inputmode="numeric"
+              maxlength="1"
+            />
+          </div>
+          <br />
+          <button class="btn">Verify</button>
+        </form>
+      </div>
+    </div>
+  </div>
+  <div class="success">
+    <div class="ellipse1">
+      <div class="ellipse2">
+        <div class="ellipse3">
+          <svg
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <g id="Huge-icon/interface/solid/search 4">
+              <rect
+                id="Rectangle 324"
+                x="4"
+                y="7"
+                width="16"
+                height="14"
+                rx="4"
+                stroke="white"
+                stroke-width="1.5"
+              />
+              <circle
+                id="Ellipse 332"
+                cx="12"
+                cy="14"
+                r="2"
+                stroke="white"
+                stroke-width="1.5"
+              />
+              <path
+                id="Ellipse 333"
+                d="M16 7C16 4.79086 14.2091 3 12 3C9.79086 3 8 4.79086 8 7"
+                stroke="white"
+                stroke-width="1.5"
+              />
+            </g>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <div class="success_word">
+      <h2>Password Changed Successfully</h2>
+      <p>Your password has been updated successfully</p>
+      <br />
+      <button class="btn_back_login">Back to Login</button>
+    </div>
+  </div>
+{% endblock body %}

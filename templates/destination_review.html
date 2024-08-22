@@ -1,0 +1,366 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block page_title %} 
+  Destination review page 
+{% endblock page_title %} 
+
+{% block body %} 
+<link rel="stylesheet" href="{% static "destination_review.css" %}"/>
+
+<div class="destination_pict">
+  <img src="{% static "destination_detail_page/destination_detail.png" %}" alt="" />
+</div>
+<section>
+  <div class="container">
+    <div class="main_destination">
+      <div class="destination">
+        <div class="destination_word">
+          <h1>Romantic Maldives</h1>
+        </div>
+        <div class="destination_content">
+          <div class="destination_content_col">
+            <div class="destination_review_col">
+              <p>Review</p>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <div class="destination_review_col">
+              <p>Days</p>
+              <h4>5 Days/4 Night</h4>
+            </div>
+            <div class="destination_review_col">
+              <p>Location</p>
+              <h4>Maldives</h4>
+            </div>
+          </div>
+          <div class="destination_content_col">
+            <div class="destination_like">
+              <i class="fa-regular fa-heart"></i>
+            </div>
+            <div class="destination_share">
+              <button class="btn">
+                <i class="fa-solid fa-share-nodes"></i>
+                <span>Share</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="pass">
+          <a class="pass_overview" href="{% url "home:destination_overview" %}">Overview</a>
+          <a class="pass_review" href="{% url "home:destination_review" %}">Review</a>
+        </div>
+        <div class="destination_review">
+          <div class="review">
+            <p>Reviews</p>
+            <div class="review_value">
+              <div class="review_value_col">
+                <h1>5</h1>
+                <p>18.0K Reviews</p>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+              </div>
+              <div class="review_value_rows">
+                <div class="review_value_row">
+                  <h1 id="excelt">Excellent</h1>
+                  <h1 id="good">Very Good</h1>
+                  <h1 id="avg">Average</h1>
+                  <h1 id="poor">Poor</h1>
+                  <h1 id="terri">Terrible</h1>
+                </div>
+                <div class="review_value_row">
+                  <p>100%</p>
+                  <p>30%</p>
+                  <p>10%</p>
+                  <p>5%</p>
+                  <p>0%</p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="articles">
+            <div class="article">
+              <div class="profile_info">
+                <div class="profile">
+                  <img src="{% static "destination_detail_page/Ellipse 956.svg" %}" alt="" />
+                </div>
+                <div class="information">
+                  <p>Shane Watson</p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="article_col">
+                <h1>Excellent Location, I Love It 😍</h1>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                </p>
+                <br />
+                <h6>
+                  Review by <span>Travo </span>Posted on
+                  <span>August 12, 2023</span>
+                </h6>
+              </div>
+            </div>
+            <div class="article">
+              <div class="profile_info">
+                <div class="profile">
+                  <img src="{% static "destination_detail_page/Ellipse 957.svg" %}" alt="" />
+                </div>
+                <div class="information">
+                  <p>Perry Wilson</p>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                  <i class="fa-solid fa-star"></i>
+                </div>
+              </div>
+              <div class="article_col">
+                <h1>
+                  We are so happy with the hotel location and the hospitality.
+                </h1>
+                <p>
+                  It is a long established fact that a reader will be distracted
+                  by the readable content of a page when looking at its layout.
+                  The point of using Lorem Ipsum is that it has a more-or-less
+                  normal distribution of letters, as opposed to using 'Content
+                  here, content here', making it look like readable English.
+                </p>
+                <br />
+                <h6>
+                  Review by <span>Travo </span>Posted on
+                  <span>August 12, 2023</span>
+                </h6>
+              </div>
+            </div>
+          </div>
+          <div class="add_articles">
+            <h1>Add your review</h1>
+            <div class="add_review">
+              <h1>Your rating</h1>
+              <div class="your_rating">
+                <div class="rating">
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="rating">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="rating">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="rating">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+                <div class="rating">
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                  <i class="fa-regular fa-star"></i>
+                </div>
+              </div>
+              <form>
+                <div class="form_review">
+                  <label for="name">
+                    Name
+                    <input type="text" placeholder="Enter Your Name" /> </label
+                  ><br />
+                </div>
+                <div class="form_review">
+                  <label for="email">
+                    Email Address
+                    <input
+                      type="email"
+                      placeholder="Enter Your Email"
+                    /> </label
+                  ><br />
+                </div>
+                <div class="form_review">
+                  <label for="review">
+                    Your Review
+                    <textarea placeholder="Enter Your Review"></textarea>
+                  </label>
+                </div>
+              </form>
+              <button class="review_btn">Submit</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="destination_ticket">
+        <div class="ticket_value">
+          <h1>$2350<span>/per person</span></h1>
+        </div>
+        <form>
+          <div class="form_group">
+            <label for="date">
+              Start date
+              <input type="date" placeholder="Start date" />
+            </label>
+          </div>
+          <div class="form_group">
+            <label for="date">
+              End date
+              <input type="date" placeholder="End date" />
+            </label>
+          </div>
+        </form>
+        <div class="form_inputs">
+          <table class="form_table">
+            <tr>
+              <th>Adults</th>
+              <td class="td_input">
+                <input type="number" value="0" min="0" />
+              </td>
+              <td class="td_value">x $2350</td>
+            </tr>
+            <tr>
+              <th>Children</th>
+              <td class="td_input">
+                <input type="number" value="0" min="0" />
+              </td>
+              <td class="td_value">x $2000</td>
+            </tr>
+            <tr>
+              <th>Infant</th>
+              <td class="td_input">
+                <input type="number" value="0" min="0" />
+              </td>
+              <td class="td_value">x $2350</td>
+            </tr>
+          </table>
+        </div>
+        <h3>Extra Service</h3>
+        <div class="trip_service">
+          <input type="checkbox" />
+          <label>Health Insurance</label>
+        </div>
+        <div class="trip_service">
+          <input type="checkbox" />
+          <label>Medical Insurance</label>
+        </div>
+        <button class="ticket_btn">Book Now</button>
+      </div>
+    </div>
+  </div>
+</section>
+<section>
+  <div class="container">
+    <div class="similar_trip">
+      <h1>Similar Trip</h1>
+      <div class="trip_cards">
+        <div class="trip_card">
+          <div class="trip_pict">
+            <img src="{% static "destination_detail_page/trip1.png" %}" />
+          </div>
+          <div class="trip_content">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>4.8 (8.0K Reviews)</span>
+            <h3>Grand Switzerland</h3>
+          </div>
+          <div class="location_date">
+            <div class="location">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Switzerland</span>
+            </div>
+            <div class="date">
+              <i class="fa-regular fa-calendar"></i>
+              <span>5 Days/4 Night</span>
+            </div>
+          </div>
+          <div class="trip_details">
+            <div class="trip_price">
+              <h3>$1500<span>/per person</span></h3>
+            </div>
+            <button class="view_btn">View more</button>
+          </div>
+        </div>
+        <div class="trip_card">
+          <div class="trip_pict">
+            <img src="{% static "destination_detail_page/trip2.png" %}" />
+          </div>
+          <div class="trip_content">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>4.8 (12.0K Reviews)</span>
+            <h3>Discover Japan</h3>
+          </div>
+          <div class="location_date">
+            <div class="location">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Japan</span>
+            </div>
+            <div class="date">
+              <i class="fa-regular fa-calendar"></i>
+              <span>7 Days/6 Night</span>
+            </div>
+          </div>
+          <div class="trip_details">
+            <div class="trip_price">
+              <h3>$2000<span>/per person</span></h3>
+            </div>
+            <button class="view_btn">View more</button>
+          </div>
+        </div>
+        <div class="trip_card">
+          <div class="trip_pict">
+            <img src="{% static "destination_detail_page/trip3.png" %}" />
+          </div>
+          <div class="trip_content">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <span>4.8 (3.0K Reviews)</span>
+            <h3>Exclusive Prague Trip</h3>
+          </div>
+          <div class="location_date">
+            <div class="location">
+              <i class="fa-solid fa-location-dot"></i>
+              <span>Prague</span>
+            </div>
+            <div class="date">
+              <i class="fa-regular fa-calendar"></i>
+              <span>8 Days/7 Night</span>
+            </div>
+          </div>
+          <div class="trip_details">
+            <div class="trip_price">
+              <h3>$1670<span>/per person</span></h3>
+            </div>
+            <button class="view_btn">View more</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}
