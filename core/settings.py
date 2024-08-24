@@ -41,7 +41,8 @@ INSTALLED_APPS = [
     'base',
     'home',
 ]
-
+AUTH_USER_MODEL = 'account.User' 
+AUTHENTICATION_BACKENDS = ['account.backends.EmailBackend']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
@@ -130,9 +131,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_PORT = 587
-EMAIL_HOST_USER = 'gulluhuseynova2@gmail.com'
-EMAIL_HOST_PASSWORD = 'gullu6305'
+EMAIL_HOST_USER = 'travojourney@gmail.com'
+EMAIL_HOST_PASSWORD = 'journey6305'
 EMAIL_USE_TLS = True
-EMAIL_USE_SSL = False 
-DEFAULT_FROM_EMAIL = "gulluhuseynva2@outlook.com"
+EMAIL_PORT = 587

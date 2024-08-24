@@ -1,14 +1,3 @@
-# from django import forms
-# from django.contrib.auth.forms import UserCreationForm
-# from django.contrib.auth import get_user_model 
-
-
-# class RegisterForm(UserCreationForm):
-#     username=forms.CharField(widget=forms.TextInput(attrs={"placeholder": "Enter email-username", "class": "form-control"}))
-#     surname=forms.CharField(widget=forms.TextInput(attrs={"placeholder": "Enter email-username", "class": "form-control"}))
-#     email=forms.CharField(widget=forms.EmailInput(attrs={"placeholder": "Enter email-address", "class": "form-control"}))
-#     password=forms.CharField(label="Password", widget=forms.PasswordInput(attrs={"placeholder": "Enter password", "class": "form-control"}))
-    
 #     class Meta:
 #         model = get_user_model()
 #         fields = ["username","surname","email", "password"]
@@ -34,7 +23,7 @@ class RegisterForm(forms.Form):
 
         
         values = {
-            "username":username,
+            "email":email,
             "password":password
         }
         return values
