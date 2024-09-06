@@ -1,0 +1,553 @@
+{% extends "home.html" %}
+{% load static %}
+
+{% block page_title %} 
+  Best Holiday page
+{% endblock page_title %} 
+
+{% block body %}
+<link rel="stylesheet" href="{% static "best_holiday.css" %}"/>  
+
+<div class="breadcrumb">
+  <div class="container">
+    <p>
+      Home <i class="fa-solid fa-angle-right"></i> Best Holiday Places
+    </p>
+  </div>
+</div>
+<section>
+  <div class="container">
+    <div class="main_listing">
+      <div class="listing_filter">
+        <div class="search">
+          <input type="text" placeholder="Search Destinations" />
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+        <div class="filter_col">
+          <div class="accordion_word">
+            <h2>Durations</h2>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="accordion_hide">
+            <div class="form_group">
+              <label for="date">
+                Start date
+                <input type="date" placeholder="Start date" />
+              </label>
+            </div><br>
+            <div class="form_group">
+              <label for="date">
+                End date
+                <input type="date" placeholder="End date" />
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="filter_col">
+          <div class="accordion_word">
+            <h2>Destinations</h2>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="accordion_hide">
+            <div class="filter_checks">
+              <div class="filter_check">
+                <input type="checkbox" />
+                <label for="Europe">Europe</label>
+              </div>
+              <div class="filter_check">
+                <input type="checkbox" />
+                <label for="United Kingdom">United Kingdom</label>
+              </div>
+              <div class="filter_check">
+                <input type="checkbox" />
+                <label for="Malaysia">Malaysia</label>
+              </div>
+              <div class="filter_check">
+                <input type="checkbox" />
+                <label for="Australia">Australia</label>
+              </div>
+              <div class="filter_check">
+                <input type="checkbox" />
+                <label for="New Zealand">New Zealand</label>
+              </div>
+              <div class="filter_check">
+                <input type="checkbox" />
+                <label for="Thailand">Thailand</label>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter_col">
+          <div class="accordion_word">
+            <h2>Type</h2>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="accordion_hide">
+            <div class="filter_checks_col">
+              <div class="filter_checks">
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="Sports Activities">Sports Activities</label>
+                </div>
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="Heritage Trip">Heritage Trip</label>
+                </div>
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="Family Trip">Family Trip</label>
+                </div>
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="Adventure Trip">Adventure Trip</label>
+                </div>
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="Road Trip">Road Trip</label>
+                </div>
+              </div>
+              <div class="filter_count">
+                <p>(10)</p>
+                <p>(50)</p>
+                <p>(35)</p>
+                <p>(17)</p>
+                <p>(20)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filter_col">
+          <div class="accordion_word">
+            <h2>Price</h2>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="accordion_hide">
+            <div class="filter_price">
+              <p>Price: $0 - $2000</p>
+              <br />
+              <img src="{% static "best_holiday_page/filter.svg" %}" alt="" />
+            </div>
+          </div>
+        </div>
+        <div class="filter_col">
+          <div class="accordion_word">
+            <h2>Ratings</h2>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+          <div class="accordion_hide">
+            <div class="filter_checks_col">
+              <div class="filter_checks">
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="5star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                  </label>
+                </div>
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="4star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                  </label>
+                </div>
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="3star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                  </label>
+                </div>
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="2star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                  </label>
+                </div>
+                <div class="filter_check">
+                  <input type="checkbox" />
+                  <label for="1star">
+                    <i class="fa-solid fa-star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                    <i class="fa-solid fa-star" id="star"></i>
+                  </label>
+                </div>
+              </div>
+              <div class="filter_count">
+                <p>(40)</p>
+                <p>(24)</p>
+                <p>(35)</p>
+                <p>(20)</p>
+                <p>(12)</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="listing_col">
+        <div class="list_view">
+          <div class="list_view_col">
+            <button class="grid active">
+              <i class="fa-solid fa-grip-vertical"></i>
+            </button>
+            <button class="list">
+              <i class="fa-solid fa-list"></i>
+            </button>
+            <h4>25 Destinations Found</h4>
+          </div>
+          <div class="list_view_default">
+            <h4>Shot by Default</h4>
+            <i class="fa-solid fa-angle-down"></i>
+          </div>
+        </div>
+        <div class="listing">
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card1.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (8.0K Reviews)</span>
+                <h3>Grand Switzerland</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Switzerland</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>5 Days/4 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$1500<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card2.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (3.0K Reviews)</span>
+                <h3>Exclusive Prague Trip</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Prague</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>8 Days/7 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$1670<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card3.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (7.5K Reviews)</span>
+                <h3>Great Britain Travel</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Great Britain</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>4 Days/3 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$1350<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card4.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (2.5K Reviews)</span>
+                <h3>The New California</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>California</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>5 Days/4 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$1200<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card5.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (12.0K Reviews)</span>
+                <h3>Discover Japan</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Japan</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>7 Days/6 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$2000<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card6.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (5.0K Reviews)</span>
+                <h3>Colorful Singapore</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Singapore</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>8 Days/7 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$1900<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card7.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (18.0K Reviews)</span>
+                <h3>Romantic Maldives</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Maldives</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>5 Days/4 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$2350<span>/per person</span></h3>
+                </div>
+                <a href="{% url "home:destination_overview" %}"><button class="view_btn">View more</button></a>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card8.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (5.0K Reviews)</span>
+                <h3>Wounderful Switzerland</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Switzerland</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>6 Days/5 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$1400<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card9.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (12.0K Reviews)</span>
+                <h3>Favourite Hong Kong</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Hong Kong</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>7 Days/6 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$1200<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+          <div class="listing_card">
+            <div class="listing_pict">
+              <img src="{% static "best_holiday_page/card10.png" %}" />
+            </div>
+            <div class="listing_card_main_detail">
+              <div class="listing_content">
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <i class="fa-solid fa-star"></i>
+                <span>4.8 (5.0K Reviews)</span>
+                <h3>New Malaysia</h3>
+              </div>
+              <div class="location_date">
+                <div class="location">
+                  <i class="fa-solid fa-location-dot"></i>
+                  <span>Maldives</span>
+                </div>
+                <div class="date">
+                  <i class="fa-regular fa-calendar"></i>
+                  <span>4 Days/3 Night</span>
+                </div>
+              </div>
+              <div class="listing_details">
+                <div class="listing_price">
+                  <h3>$1900<span>/per person</span></h3>
+                </div>
+                <button class="view_btn">View more</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="page_pass">
+          <i class="fa-solid fa-arrow-left"></i>
+          <a href="">1</a>
+          <a href="">2</a>
+          <a href="">3</a>
+          <a href="">4</a>
+          <a href="">5</a>
+          <i class="fa-solid fa-arrow-right"></i>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock body %}

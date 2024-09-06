@@ -16,18 +16,17 @@
       <p>Please enter details</p>
     </div>
     <div class="register_form">
-      <form method="post">
+      <form method="Post">
         {% csrf_token %}
-
         <div class="register_form_group">
           <label for="{{form.username.id_for_label}}">First name</label>
-          {{form.username}}
+          {{form.firstname}}
           {% comment %} <input type="text" placeholder="Perry" /> {% endcomment %}
         </div>
         <br />
         <div class="register_form_group">
           <label for="{{form.surname.id_for_label}}">Last name</label>
-          {{form.surname}}
+          {{form.lastname}}
           {% comment %} <input type="text" placeholder="Wilson" /> {% endcomment %}
         </div>
         <br />

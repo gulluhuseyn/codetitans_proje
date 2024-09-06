@@ -6,3 +6,6 @@ def destination_overview_view(request):
 
 def destination_review_view(request):
     return render(request,"destination_review.html")
+
+def best_holiday_view(request):
+    return render(request,"best_holiday.html")

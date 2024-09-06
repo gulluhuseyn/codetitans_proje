@@ -316,10 +316,18 @@
 .trip_content i:last-of-type {
   color: #a6aaac33;
 }
+.trip_content h3{
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
 .location_date {
   display: flex;
   justify-content: space-between;
   gap: 30px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid #a6aaac1a;
 }
 .location i,
 .date i {
@@ -759,6 +767,9 @@
   .trip_card img {
     height: 140px;
   }
+  .trip_content h3{
+    font-size: 16px;
+  }
   .trip_price h3 {
     font-size: 20px;
   }
@@ -924,6 +935,9 @@
   }
   .trip_price h3 {
     font-size: 16px;
+  }
+  .trip_content span{
+    font-size: 12px;
   }
   .location span,
   .date span {
