@@ -41,7 +41,7 @@ INSTALLED_APPS = [
     'base',
     'home',
 ]
-AUTH_USER_MODEL = 'account.CustomUser' 
+AUTH_USER_MODEL = 'account.User' 
 # AUTHENTICATION_BACKENDS = ['account.backends.EmailBackend']
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
@@ -52,6 +52,8 @@ MIDDLEWARE = [
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
+
+# SESSION_ENGINE = 'django.contrib.sessions.backends.db'
 
 ROOT_URLCONF = 'core.urls'
 
@@ -135,3 +137,4 @@ EMAIL_HOST_USER = 'travojourney@gmail.com'
 EMAIL_HOST_PASSWORD = 'journey6305'
 EMAIL_USE_TLS = True
 EMAIL_PORT = 587
+DEFAULT_FROM_EMAIL = 'travojourney@gmail.com'

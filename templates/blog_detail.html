@@ -127,30 +127,52 @@ Blog detail page
               </p>
             </div>
           </div>
+          {% for blog_comment in blog_comments  %}
+          <div class="blog_comment_col">
+            <div class="comment_profile">
+              <div class="comment_profile_pict_add">
+                <i class="fa-regular fa-user"></i>
+              </div>
+              <div class="comment_profile_cont">
+                <h2>{{blog_comment.author}}</h2>
+                <p></p>
+              </div>
+            </div>
+            <div class="comment_content">
+              <p>{{blog_comment.comment}}</p>
+            </div>
+          </div>
+          {% endfor %}
         </div>
         <div class="add_comment">
           <h1>Leave a Reply</h1>
-          <form>
-            <div class="form_comment">
-              <label for="name">
-                Name
-                <input type="text" placeholder="Enter Your Name" />
-              </label>
+          <form method="Post">
+            {% csrf_token %}
+            <div class="add_comment_form">
+              <div class="form_comment">
+                <label for="{{form.author.id_for_label}}">
+                  Name
+                  {{form.author}}
+                  {% comment %} <input type="text" placeholder="Enter Your Name" /> {% endcomment %}
+                </label>
+              </div>
+              <div class="form_comment">
+                <label for="{{form.email.id_for_label}}">
+                  Email Address
+                  {{form.email}}
+                  {% comment %} <input type="email" placeholder="Enter Your Email" /> {% endcomment %}
+                </label>
+              </div>
+              <div class="form_comment">
+                <label for="{{form.comment.id_for_label}}">
+                  Comments
+                  {{form.comment}}
+                  {% comment %} <textarea placeholder="Enter Your Comments"></textarea> {% endcomment %}
+                </label>
+              </div>
             </div>
-            <div class="form_comment">
-              <label for="email">
-                Email Address
-                <input type="email" placeholder="Enter Your Email" />
-              </label>
-            </div>
-            <div class="form_comment">
-              <label for="comment">
-                Comments
-                <textarea placeholder="Enter Your Comments"></textarea>
-              </label>
-            </div>
+            <button class="add_comment_btn">Submit</button>
           </form>
-          <button class="add_comment_btn">Submit</button>
         </div>
       </div>
       <div class="others_blog">

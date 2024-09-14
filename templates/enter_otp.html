@@ -20,7 +20,8 @@
       <p>We have share a code of your registered email address...</p>
     </div>
     <div class="enter_form">
-      <form>
+      <form method="post">
+        {% csrf_token %}
         <div class="enter_input">
           <input class="input" type="text" inputmode="numeric" maxlength="1" />
           <input class="input" type="text" inputmode="numeric" maxlength="1" />
